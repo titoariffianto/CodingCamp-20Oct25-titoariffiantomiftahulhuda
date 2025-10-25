@@ -53,9 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 4. menambahkan 'event listener' pada tombol
         menuButton.addEventListener('click', function() {
             
-            // 5. Saat tombol diklik, 'toggle' (pasang/lepas) class 'hidden' pada menu
-            // Jika menu sedang 'hidden', class 'hidden' akan dihapus (menu tampil).
-            // Jika menu sedang tampil, class 'hidden' akan dipasang (menu sembunyi).
+            // 5. toggle kelas 'hidden' pada menu navigasi
             navMenu.classList.toggle('hidden');
         });
     }

@@ -1,24 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test RevoU Coding Camp</title>
+    <title>Portfolio Tito</title>
+
+    <!-- CSS External File -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    <div class="main-logo"></div>
 
-    <nav>
-        <a href="home">home</a>
-        <a href="our">Our</a>
-        <a href=""></a>     
-    </nav>
+    <!-- Header Content -->
+    <header class="main-header p-[8px] flex justify-between items-center flex-wrap">
+        
+        <div class="main-logo"></div>
 
-    <header>Hai</header>
-    <main>halo</main>
-    <footer>footer</footer>
+        <button id="menu-toggle-btn" class="md:hidden border rounded p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
 
+        <nav id="nav-menu" class="hidden md:flex gap-1 w-full md:w-auto flex-col md:flex-row mt-4 md:mt-0">
+            <a class="border rounded p-2 text-center" href="#home-section">Home</a>
+            <a class="border rounded p-2 text-center" href="#profile-section">Our Profile</a>
+            <a class="border rounded p-2 text-center" href="#portfolio-section">Portfolio</a>
+            <a class="border rounded p-2 text-center" href="#message-section">Message Us</a>
+        </nav>
+    </header>
+
+    <hr />
+
+    <!-- Main Content -->
+    <main>
+        <section id="home-section" class="hero-section min-h-screen flex items-center bg-white">
+            <div class="container mx-auto px-8 py-16">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    <div>
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+                            <span id="greet-name"></span>Welcome!
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl font-semibold text-blue-600 mb-6">
+                            I'm Tito, a Software Developer.
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8">
+                            Saya seorang developer yang berfokus pada pembuatan aplikasi web dan mobile modern.
+                            Silakan lihat beberapa proyek saya di bawah ini.
+                        </p>
+                        <a href="#portfolio-section" class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 inline-block">
+                            Lihat Portfolio Saya
+                        </a>
+                    </div>
+
+                    <div class="text-center md:order-first">
+                         <img src="assets/tito.png" alt="Tito's Photo" class="rounded-lg shadow-2xl w-3/4 lg:w-full mx-auto">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Our Profile -->
+        <section id="profile-section" class="profile-section min-h-[500px]">
+            
+            <div class="profile-banner h-64 w-full bg-cover bg-center">
+                <div class="h-full w-full bg-black bg-opacity-50 flex items-center justify-center">
+                    <h2 class="text-4xl font-bold text-white">Our Profile</h2>
+                </div>
+            </div>
+
+            <div class="container mx-auto p-8">
+
+                <div class="mb-12">
+                    <h3 class="text-3xl font-bold mb-4 text-center">About Us</h3>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
+                        Selamat datang di portfolio saya. Saya adalah seorang developer yang berfokus pada
+                        pembuatan aplikasi web modern dan fungsional. Saya memiliki keahlian dalam
+                        teknologi seperti React, Next.js, dan Tailwind CSS.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-semibold mb-3 text-center">Our Vision</h4>
+                        <p class="text-gray-600">
+                            Menjadi developer terdepan yang memberikan solusi digital inovatif
+                            dan berkualitas tinggi yang melebihi ekspektasi klien.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-semibold mb-3 text-center">Our Mission</h4>
+                        <p class="text-gray-600">
+                            - Menciptakan produk yang handal dan mudah digunakan.<br />
+                            - Terus belajar dan beradaptasi dengan teknologi terbaru.<br />
+                            - Membangun hubungan kemitraan yang kuat dengan klien.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Portfolio -->
+        <section id="portfolio-section" class="portfolio-section py-16 bg-gray-50">
+            <div class="container mx-auto px-8">
+
+                <h2 class="text-3xl font-bold text-center mb-4">Portofolio</h2>
+                <p class="text-lg text-gray-600 text-center mb-12">Beberapa proyek yang pernah saya kerjakan</p>
+
+                <div class="grid grid-cols-1 md-grid-cols-2 lg-grid-cols-3 gap-8">
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-48 object-cover"src="https://picsum.photos/seed/web/400/300" alt="Gambar Proyek 1">
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Website Manajemen dan Inspeksi APAR</h3>
+                            <p class="text-gray-700 mb-4">Sebuah website untuk mengelola data APAR dan inspeksi secara efisien berbasis QR Code.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Laravel</span>
+                                <span class="bg-cyan-100 text-cyan-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Bootstrap CSS</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img class="w-full h-48 object-cover"src="https://picsum.photos/seed/web/400/300" alt="Gambar Proyek 1">
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Website Asset Market</h3>
+                            <p class="text-gray-700 mb-4">Sebuah website E-Commerce yang berfokus pada penjualan asset 2D, 3D, dan audio.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-cyan-100 text-cyan-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Message Us -->
+        <section id="message-section" class="message-section p-4 min-h-[500px]">
+            <h2 class="text-2xl font-bold mb-4">Message Us</h2>
+            <p class="text-lg">Feel free to reach out for collaborations or inquiries.</p>
+
+            <form>
+                <label for="name" class="block mb-2">Name:</label>
+                <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full" required>
+
+                <label for="email" class="block mb-2">Email:</label>
+                <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full" required>
+
+                <label for="message" class="block mb-2">Message:</label>
+                <textarea id="message-input" name="message" class="border p-2 mb-4 w-full" rows="4" required></textarea>
+
+                <button onclick="validateForm();" class="bg-blue-500 text-white p-2 rounded">Send Message</button>
+                <p id="form-status" class="mt-4 text-center"></p>
+            </form>
+
+
+        </section>
+    </main>
+
+    <!-- Footer Content -->
+    <footer>
+        <div class="footer-content p-4 text-center">
+            <p class="text-sm">&copy; 2025 Tito's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Javascript External File -->
     <script src="js/script.js"></script>
 </body>
+
 </html>
